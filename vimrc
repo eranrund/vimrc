@@ -39,6 +39,7 @@ set wildignore+=*.pyc
 set wildignore+=media
 set wildignore+=bootstrap-3.0.0
 
+nn <C-r> :CtrlPBuffer<cr>
 
 set number
 set nocompatible
@@ -67,3 +68,6 @@ syntax enable
 set t_Co=256
 set background=dark
 colorscheme molokai 
+
+autocmd bufreadpre *.mako setlocal autoindent
+
