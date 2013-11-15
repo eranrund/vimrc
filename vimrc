@@ -70,4 +70,6 @@ set background=dark
 colorscheme molokai 
 
 autocmd bufreadpre *.mako setlocal autoindent
+cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
+cnoreabbrev <expr> bd ((getcmdtype() is# ':' && getcmdline() is# 'bd')?('Bdelete'):('bd'))
 
