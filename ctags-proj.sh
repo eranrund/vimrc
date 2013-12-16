@@ -1,5 +1,5 @@
 #!/bin/sh
-#!/bin/bash
+
 if [ -f ".ctags.srclist" ]; then
   ctags -R --exclude='.git' --exclude=node_modules -L .ctags.srclist
 else
