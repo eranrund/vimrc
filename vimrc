@@ -73,7 +73,53 @@ autocmd bufreadpre *.mako setlocal autoindent
 cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
 cnoreabbrev <expr> bd ((getcmdtype() is# ':' && getcmdline() is# 'bd')?('Bdelete'):('bd'))
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" ag
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+function! FindPrompt()
+    let str = input("Search: ", "")
+    if str == ""
+        return
+    endif
+
+    :silent! execute "Ag '" . str . "'"
+    :cw
+endfunction
+
+function! FindWordNoFilter()
+    let str = expand("<cword>")
+    if str == ""
+        return
+    endif
+
+    :silent! execute "Ag '" . str . "'"
+    :cw
+endfunction
+
+function! DeleteAllLinesWithThisWord()
+    let str = expand("<cword>")
+    if str == ""
+        return
+    endif
+    :silent! execute "g/" . str . "/d"
+endfunction
+
+function! FindWord()
+    let str = expand("<cword>")
+    if str == ""
+        return
+    endif
+
+    :silent! execute "Ag '" . str . "'"
+    :cw
+endfunction
+
+map <F3> :call FindWord()<CR>
+" map <F4> :call FindWordNoFilter()<CR>
+nmap F :call FindPrompt()<CR>
+nmap <F9> :set autowrite<CR>:cp<CR>:set noautowrite<CR>zz
+nmap <F10> :set autowrite<CR>:cn<CR>:set noautowrite<CR>zz
 
 
 """""""
