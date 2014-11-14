@@ -70,6 +70,8 @@ set background=dark
 colorscheme molokai 
 
 autocmd bufreadpre *.mako setlocal autoindent
+autocmd bufreadpre *.tpl set filetype=html
+autocmd bufreadpre *.hbs set filetype=html
 cnoreabbrev <expr> W ((getcmdtype() is# ':' && getcmdline() is# 'W')?('w'):('W'))
 cnoreabbrev <expr> bd ((getcmdtype() is# ':' && getcmdline() is# 'bd')?('Bdelete'):('bd'))
 
@@ -125,3 +127,5 @@ nmap <F10> :set autowrite<CR>:cn<CR>:set noautowrite<CR>zz
 """""""
 
 autocmd BufNewFile,BufRead /Users/eran/Projects/elad/* set noexpandtab tabstop=4 shiftwidth=4
+let g:jedi#show_call_signatures = "0"
+
