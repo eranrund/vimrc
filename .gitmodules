@@ -19,3 +19,9 @@
 [submodule "bundle/ag"]
 	path = bundle/ag
 	url = https://github.com/rking/ag.vim
+[submodule "bundle/YouCompleteMe"]
+	path = bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "bundle/vim-bad-whitespace"]
+	path = bundle/vim-bad-whitespace
+	url = git@github.com:bitc/vim-bad-whitespace.git
