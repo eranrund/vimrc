@@ -41,6 +41,8 @@ set wildignore+=bootstrap-3.0.0
 
 nn <C-r> :CtrlPBuffer<cr>
 
+set completeopt-=preview
+
 set number
 set nocompatible
 set laststatus=2
@@ -126,6 +128,16 @@ nmap <F10> :set autowrite<CR>:cn<CR>:set noautowrite<CR>zz
 
 """""""
 
+
+
+"""" bad whitespace
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
 autocmd BufNewFile,BufRead /Users/eran/Projects/elad/* set noexpandtab tabstop=4 shiftwidth=4
 let g:jedi#show_call_signatures = "0"
+
+
+
+
+let g:ycm_confirm_extra_conf = 0
 
