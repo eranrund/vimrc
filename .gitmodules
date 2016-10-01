@@ -21,4 +21,13 @@
 	url = https://github.com/Valloric/YouCompleteMe.git
 [submodule "bundle/vim-bad-whitespace"]
 	path = bundle/vim-bad-whitespace
-	url = git@github.com:bitc/vim-bad-whitespace.git
+    url = git@github.com:bitc/vim-bad-whitespace.git
+[submodule "bundle/typescript-vim"]
+	path = bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "bundle/vimproc.vim"]
+	path = bundle/vimproc.vim
+	url = https://github.com/Shougo/vimproc.vim.git
+[submodule "bundle/tsuquyomi"]
+	path = bundle/tsuquyomi
+	url = https://github.com/Quramy/tsuquyomi.git

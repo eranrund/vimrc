@@ -21,6 +21,7 @@ syntax on
 filetype plugin indent on
 
 set mouse=a
+set wildmode=longest,list,full
 
 " :noremap <Leader>t :!~/.vim/ctags-proj.sh<CR>
 set tags=./tags;~/
@@ -121,7 +122,7 @@ endfunction
 
 map <F3> :call FindWord()<CR>
 " map <F4> :call FindWordNoFilter()<CR>
-nmap F :call FindPrompt()<CR>
+nmap <C-f> :call FindPrompt()<CR>
 nmap <F9> :set autowrite<CR>:cp<CR>:set noautowrite<CR>zz
 nmap <F10> :set autowrite<CR>:cn<CR>:set noautowrite<CR>zz
 
@@ -141,3 +142,29 @@ let g:jedi#show_call_signatures = "0"
 
 let g:ycm_confirm_extra_conf = 0
 
+
+""" TODO
+" provide hjkl movements in Insert mode via the <Alt> modifier key
+" inoremap <A-h> <C-o>h
+" inoremap <A-j> <C-o>j
+" inoremap <A-k> <C-o>k
+" inoremap <A-l> <C-o>l
+
+" " Disable Arrow keys in Escape mode
+" map <up> <nop>
+" map <down> <nop>
+" map <left> <nop>
+" map <right> <nop>
+
+" " Disable Arrow keys in Insert mode
+
+" imap <up> <nop>
+" imap <down> <nop>
+" imap <left> <nop>
+" imap <right> <nop>
+
+" " Window keys
+" nnoremap <C-h> <C-w>h
+" nnoremap <C-j> <C-w>j
+" nnoremap <C-k> <C-w>k
+" nnoremap <C-l> <C-w>l
