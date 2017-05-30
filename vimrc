@@ -146,6 +146,10 @@ set splitbelow
 set splitright
 
 
+" TagBar
+nmap <F8> :TagbarToggle<CR>
+let g:airline#extensions#tagbar#flags = 'f'
+
 """ TODO
 " provide hjkl movements in Insert mode via the <Alt> modifier key
 inoremap <A-h> <C-o>h
