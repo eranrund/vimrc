@@ -142,15 +142,18 @@ let g:jedi#show_call_signatures = "0"
 
 let g:ycm_confirm_extra_conf = 0
 
+set splitbelow
+set splitright
+
 
 """ TODO
 " provide hjkl movements in Insert mode via the <Alt> modifier key
-" inoremap <A-h> <C-o>h
-" inoremap <A-j> <C-o>j
-" inoremap <A-k> <C-o>k
-" inoremap <A-l> <C-o>l
+inoremap <A-h> <C-o>h
+inoremap <A-j> <C-o>j
+inoremap <A-k> <C-o>k
+inoremap <A-l> <C-o>l
 
-" " Disable Arrow keys in Escape mode
+" Disable Arrow keys in Escape mode
 " map <up> <nop>
 " map <down> <nop>
 " map <left> <nop>
@@ -163,8 +166,8 @@ let g:ycm_confirm_extra_conf = 0
 " imap <left> <nop>
 " imap <right> <nop>
 
-" " Window keys
-" nnoremap <C-h> <C-w>h
-" nnoremap <C-j> <C-w>j
-" nnoremap <C-k> <C-w>k
-" nnoremap <C-l> <C-w>l
+" Window keys
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
