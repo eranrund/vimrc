@@ -11,6 +11,11 @@
 "  :tnext, :tprev - next/prev tag
 "
 "
+"
+if has('python3')
+  silent! python3 1
+endif
+
 execute pathogen#infect()
 
 filetype off
@@ -45,6 +50,7 @@ nn <C-r> :CtrlPBuffer<cr>
 set completeopt-=preview
 
 set number
+set relativenumber
 set nocompatible
 set laststatus=2
 set encoding=utf-8
@@ -149,6 +155,10 @@ set splitright
 " TagBar
 nmap <F8> :TagbarToggle<CR>
 let g:airline#extensions#tagbar#flags = 'f'
+let g:airline_powerline_fonts = 1
+let g:tagbar_autoclose = 1
+let g:tagbar_autofocus = 1
+
 
 """ TODO
 " provide hjkl movements in Insert mode via the <Alt> modifier key
