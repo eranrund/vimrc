@@ -185,3 +185,8 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" per-project config support
+if filereadable("_gvimrc")
+    source _local_vimrc
+endif
