@@ -187,6 +187,6 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " per-project config support
-if filereadable("_gvimrc")
+if filereadable("_local_vimrc")
     source _local_vimrc
 endif
