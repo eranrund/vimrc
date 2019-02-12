@@ -34,6 +34,6 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = git://github.com/majutsushi/tagbar
-[submodule "/Users/eran/.vim/bundle/vim-airline"]
-	path = /Users/eran/.vim/bundle/vim-airline
+[submodule "bundle/vim-airline"]
+	path = bundle/vim-airline
 	url = https://github.com/vim-airline/vim-airline
