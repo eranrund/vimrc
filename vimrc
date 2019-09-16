@@ -28,6 +28,10 @@ filetype plugin indent on
 set mouse=a
 set wildmode=longest,list,full
 
+" rusty-tags
+" autocmd BufRead *.rs :setlocal tags=./rusty-tags.vi;/
+" autocmd BufWritePost *.rs :silent! exec "!rusty-tags vi --quiet --start-dir=" . expand('%:p:h') . "&" | redraw!
+
 " :noremap <Leader>t :!~/.vim/ctags-proj.sh<CR>
 set tags=./tags;~/
 let g:ctrlp_use_caching = 1
@@ -77,6 +81,8 @@ syntax enable
 set t_Co=256
 set background=dark
 colorscheme molokai 
+" colorscheme elflord
+" color dracula
 
 autocmd bufreadpre *.mako setlocal autoindent
 autocmd bufreadpre *.tpl set filetype=html
@@ -190,3 +196,8 @@ nnoremap <C-l> <C-w>l
 if filereadable("_local_vimrc")
     source _local_vimrc
 endif
+
+au FileType rust nmap gd <Plug>(rust-def)
+au FileType rust nmap gs <Plug>(rust-def-split)
+au FileType rust nmap gx <Plug>(rust-def-vertical)
+au FileType rust nmap <leader>gd <Plug>(rust-doc)
